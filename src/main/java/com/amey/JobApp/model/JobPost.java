@@ -7,9 +7,9 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Data // HENCE NO NEED TO CREATE GETTERS AND SETTERS
-@NoArgsConstructor // NO NEED TO CREATE CONSTRUCTOR
 @AllArgsConstructor
 @Component
+@NoArgsConstructor // NO NEED TO CREATE CONSTRUCTOR
 public class JobPost {
     private int postId;
     private int reqExperience;
@@ -17,6 +17,51 @@ public class JobPost {
     private String postDesc;
     private List<String> postTechStack;
 
-    public <E> JobPost(int i, String javaDeveloper, String s, int i1, java.util.List<E> es) {
+    public int getPostId() {
+        return postId;
+    }
+
+    public List<String> getPostTechStack() {
+        return postTechStack;
+    }
+
+    public JobPost(int postId, String postDesc, String postProfile, int reqExperience, List<String> postTechStack) {
+        this.postId = postId;
+        this.postTechStack = postTechStack;
+        this.postDesc = postDesc;
+        this.postProfile = postProfile;
+        this.reqExperience = reqExperience;
+    }
+
+    public void setPostTechStack(List<String> postTechStack) {
+        this.postTechStack = postTechStack;
+    }
+
+    public void setPostId(int postId) {
+        this.postId = postId;
+    }
+
+    public int getReqExperience() {
+        return reqExperience;
+    }
+
+    public void setReqExperience(int reqExperience) {
+        this.reqExperience = reqExperience;
+    }
+
+    public String getPostProfile() {
+        return postProfile;
+    }
+
+    public void setPostProfile(String postProfile) {
+        this.postProfile = postProfile;
+    }
+
+    public String getPostDesc() {
+        return postDesc;
+    }
+
+    public void setPostDesc(String postDesc) {
+        this.postDesc = postDesc;
     }
 }
