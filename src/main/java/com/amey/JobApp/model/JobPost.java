@@ -17,6 +17,6 @@ public class JobPost {
     private String postDesc;
     private List<String> postTechStack;
 
-    public <E> JobPost(int i, String javaDeveloper, String s, int i1, List<E> es) {
+    public <E> JobPost(int i, String javaDeveloper, String s, int i1, java.util.List<E> es) {
     }
 }
